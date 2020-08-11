@@ -1,8 +1,127 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+:root {
+  --box-shadow: 0 5px 4px rgba(0, 0, 0, 0.12);
+}
 * {
   box-sizing: border-box;
 }
 body {
   background-color: #f7f7f7;
   font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  max-width: 388px;
+  margin-top: 50px;
+}
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h1 {
+  margin: 0;
+}
+h2 {
+  margin-bottom: 0;
+}
+p {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+}
+.inc-exp-container > div {
+  padding: 0 53px;
+}
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+.delete-btn {
+  position: absolute;
+  top: 0;
+  transform: translate(-175%, 30%);
+  cursor: pointer;
+  background: #e74c3c;
+  color: #fff;
+  border: 0;
+  font-size: 19px;
+  opacity: 0;
+}
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+.btn {
+  cursor: pointer;
+  width: 100%;
+  margin: 10px 0 30px;
+  padding: 10px;
+  background-color: #9c88ff;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
 }

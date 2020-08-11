@@ -5,55 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"
+      defer
+    ></script>
     <script src="script.js" defer></script>
   </head>
   <body>
     <h2>Expense Tracker</h2>
     <div class="container">
-      <h3>YOUR BALANCE</h3>
+      <h4>YOUR BALANCE</h4>
       <h1 class="balance" id="balance">$0.00</h1>
 
       <div class="inc-exp-container">
-        <div class="income money">
+        <div class="income">
           <p>INCOME</p>
-          <h3 id="money-plus">
-            $0.00
-          </h3>
+          <h2 id="money-plus" class="money plus">$0.00</h2>
         </div>
-        <div class="expense money">
+        <div class="expense">
           <p>EXPENSE</p>
-          <h3 id="money-minus">
-            $0.00
-          </h3>
+          <h2 id="money-minus" class="money minus">$0.00</h2>
         </div>
       </div>
 
-      <h2>history</h2>
+      <h3>History</h3>
       <ul class="history list" id="list">
-        <li class="plus">
-          <p id="text">cash</p>
-          <p id="amount">+1</p>
+        <!-- <li class="plus">
+          <p id="litext">cash</p>
+          <p id="liamount">+1</p>
           <button class="delete-btn">
             x
           </button>
-        </li>
+        </li> -->
       </ul>
 
-      <div class="new-Transcation">
-        <form id="form">
-          <div class="form-control">
-            <label for="text">Text</label>
-            <input type="text" id="text" placeholder="Enter Text" />
-          </div>
-          <div class="form-control">
-            <label for="text"
-              >Amount<span>(negative - expense, positive - income)</span></label
-            >
-            <input type="number" id="amount" placeholder="Enter amount" />
-          </div>
-          <button class="btn" id="btn">Add Transcation</button>
-        </form>
-      </div>
+      <h3>Add New Transcation</h3>
+
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="Enter Text......" />
+        </div>
+        <div class="form-control">
+          <label for="amount"
+            >Amount<br />(negative - expense, positive - income)</label
+          >
+          <input type="number" id="amount" placeholder="Enter amount......" />
+        </div>
+        <button class="btn" id="btn">Add Transcation</button>
+      </form>
     </div>
   </body>
 </html>
